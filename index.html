@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Belajar Bootstrap 4</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Menyisipkan Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Tempat menaruh CSS tambahan-->
+    <style type="text/css">
+    </style>
+	<script>
+            function startTime() {
+              var today = new Date();
+              var h = today.getHours();
+              var m = today.getMinutes();
+              var s = today.getSeconds();
+              m = checkTime(m);
+              s = checkTime(s);
+              document.getElementById('txt').innerHTML =
+              h + ":" + m + ":" + s;
+              var t = setTimeout(startTime, 500);
+            }
+            function checkTime(i) {
+              if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+              return i;
+            }
+
+    </script>
+</head>
+
+<body>
+    <!-- Navigasi Menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #41b0ff;">
+            <!-- Nama Website bisa juga di ganti Logo-->
+            <a class="navbar-brand" href="index.html">PATIH SAMPUN</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Baris Menu Utama-->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="profil.html">Profil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="krs.html">KRS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="galeri.html">Galeri</a>
+                </li>
+				<div style="padding-left:220px"><li class="nav-item">
+				<form class="form-inline my-2 my-lg-0">
+				<button class="btn btn-outline-success my-2 my-sm-0">	
+					<body onload="startTime()">
+					<div id="txt"></div>
+				</button>
+				</form></div>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </div>
+          </nav>
+
+    <!-- Membuat komponen jubotron -->
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+						<center><font size="4px"><p id="name"></p></font></center>
+							<script>
+							var nama = prompt("Selamat Datang Silahkan Isi Nama Anda Terlebih Dahulu");
+							if(nama != ""){
+							document.getElementById("name").innerHTML = "Terima Kasih Sudah Berkunjung " + nama;
+							}
+							</script>
+                        <h1>Belajar Bootstrap 4</h1>
+                        <div class="lead">Ini adalah contoh website dengan css dan javascript dari bootstrap.</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <a class="d-block" href="#">
+                            <img width="360" height="270" src="BS_Application-400x300.png" class="theme-card__img wp-post-image" alt="">
+                        </a>
+                        <a target="_blank" href="#">Live preview</a>
+                    </div>
+                    <div class="col-4">
+                            <a class="d-block" href="#">
+                                    <img width="360" height="270" src="BS_Dashboard-400x300.png" class="theme-card__img wp-post-image" alt="">
+                                </a>
+                                <a target="_blank" href="#">Live preview</a>
+                    </div>
+                    <div class="col-4">
+                            <a class="d-block" href="#">
+                                    <img width="360" height="270" src="BS_Marketing-400x300.png" class="theme-card__img wp-post-image" alt="">
+                                </a>
+                                <a target="_blank" href="#">Live preview</a>
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+    <!-- Menyisipkan JQuery dan Javascript Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Navigasi bawah -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgba(61, 61, 61, 0.63);">
+        <div class="row">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto" style="padding-left:60px;">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Sitemap</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                  </li>
+                </ul>
+                <!-- Menambahkan Credit-->
+                <div style="padding-left: 800px; color: rgb(209, 209, 209)">
+                Copyright©2018 | Miftah Parid</div>
+            </div>
+        </div>
+    </nav>
+</body>
+
+</html>
